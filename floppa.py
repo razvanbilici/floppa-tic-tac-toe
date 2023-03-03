@@ -180,7 +180,7 @@ def click(clicked_button):
 
 
 def volume(vol):
-    bg_music.set_volume(.1 * vol * 2)
+    bg_music.set_volume(.2 * vol)
 
 
 def mute():
@@ -189,7 +189,7 @@ def mute():
         mute_unmute.configure(text="Unmute", fg_color="red")
         return
 
-    bg_music.set_volume(.1 * volume_slider.get() * 2)
+    bg_music.set_volume(.2 * volume_slider.get())
     mute_unmute.configure(text="Mute", fg_color="green")
 
 
@@ -200,8 +200,6 @@ def change_song():
     not_playing.append(current_song)
     current_song = song
     not_playing.remove(current_song)
-
-    print(not_playing)
 
     bg_music.play(pygame.mixer.Sound(os.path.join(basedir, bg_sound_path + current_song)), loops=-1)
 
