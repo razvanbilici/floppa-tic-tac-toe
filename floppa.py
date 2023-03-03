@@ -1,4 +1,3 @@
-import customtkinter.windows
 import PIL.Image, PIL.ImageTk
 import pygame
 import customtkinter as ct
@@ -34,7 +33,7 @@ floppa_score, sogga_score = 0, 0
 turn = None
 total_moves = 0
 
-root = customtkinter.windows.CTk()
+root = ct.windows.CTk()
 root.iconbitmap(os.path.join(basedir, "images//flop.ico"))
 root.title("Floppa Tic Tac Toe")
 
