@@ -142,7 +142,7 @@ def check_win():
 def click(clicked_button):
     global turn, turn_label, total_moves
 
-    pygame.mixer.Channel(0).stop()
+    fx_sounds.stop()
 
     if game_matrix[buttons.index(clicked_button)] != "":
         messagebox.showerror("Tic Tac Toe", "Smt else bruh")
